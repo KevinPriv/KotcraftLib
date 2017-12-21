@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "compatibilityLevel": "JAVA_8",
+  "package": "me.kbrewster.api.mixins",
+  "refmap": "mixins.sproject.refmap.json",
+  "verbose": true,
+  "mixins": [
+    "MixinMinecraft",
+
+    "gui.MixinInventoryEffectRenderer"
+  ]
+}
