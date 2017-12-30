@@ -1,14 +1,16 @@
 package me.kbrewster.api.utilities
 
 import net.minecraft.client.gui.FontRenderer
-import net.minecraft.client.gui.Gui
 import net.minecraft.client.renderer.GlStateManager
 import net.minecraft.client.renderer.Tessellator
-import net.minecraft.client.renderer.texture.TextureAtlasSprite
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats
 import org.lwjgl.opengl.GL11
 import java.awt.Color
 
+
+inline fun matrix(func: () -> Unit) {
+    func.invoke()
+}
 
 /**
  * Draws a thin horizontal line between two points.
