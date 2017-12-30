@@ -42,6 +42,14 @@ fun drawVerticalLine(x: Int, startY: Int, endY: Int, color: Int) {
     drawRect(x, startY + 1, x + 1, endY, color)
 }
 
+infix fun Int.colorMul(f: Float): Int {
+    val weight = (f * 256.0f).toInt()
+    val red = (this shr 16 and 255) * weight / 256
+    val green = (this shr 8 and 255) * weight / 256
+    val blue = (this and 255) * weight / 256
+    return (red shl 16) or (green shl 8) or blue
+}
+
 /**
  * Draws a solid color rectangle with the specified coordinates and color.
  */
