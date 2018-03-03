@@ -23,6 +23,11 @@ object EventBus {
     fun register(vararg obj: Any) =
             obj.forEach(this::register)
 
+    fun unregister(obj: Any) =
+            subscriptions.remove(obj.javaClass)
+
+    fun unregister(clazz: Class<*>) =
+            subscriptions.remove(clazz)
 
     fun post(event: Any) =
             subscriptions[event.javaClass]?.forEach { sub ->

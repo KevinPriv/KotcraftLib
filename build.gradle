@@ -61,6 +61,7 @@ dependencies {
         exclude module: 'commons-io'
         exclude module: 'log4j-core'
     }
+    compile group: 'org.slick2d', name: 'slick2d-core', version: '1.0.2'
     compile 'org.jetbrains.kotlin:kotlin-stdlib-jre8:1.1.50'
     compile('com.esotericsoftware:reflectasm:1.11.3') {
         exclude module: 'asm'

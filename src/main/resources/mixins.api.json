@@ -6,7 +6,17 @@
   "verbose": true,
   "mixins": [
     "MixinMinecraft",
-
+    "MixinEnumConnectionState",
+    "packets.MixinC00Handshake",
+    "packets.MixinSPacketJoinGame",
+    "packets.MixinSPacketTeams",
+    "packets.MixinSPacketPlayerPosLook",
+    "packets.MixinSPacketChangeGameState",
+    "MixinNetworkManager",
+    "rendering.MixinRenderGlobal",
+    "rendering.MixinWorld",
+    "rendering.MixinChunk",
+    "MixinResourcePackFix",
     "gui.MixinInventoryEffectRenderer"
   ]
 }

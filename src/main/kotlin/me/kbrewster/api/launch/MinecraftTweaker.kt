@@ -62,9 +62,9 @@ class MinecraftTweaker : ITweaker {
         }
     }
 
-    private fun addArg(label: String, file: File?) =
+    private fun addArg(args: String, file: File?) =
             file?.let {
-                addArg(label, file.absolutePath)
+                addArg(args, file.absolutePath)
             }!!
 
     private fun addArgs(args: Map<String, Any?>) =

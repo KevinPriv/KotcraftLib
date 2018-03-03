@@ -1,3 +1,4 @@
+@file:JvmName("RenderHelper")
 package me.kbrewster.api.utilities
 
 import net.minecraft.client.gui.FontRenderer
@@ -8,8 +9,10 @@ import org.lwjgl.opengl.GL11
 import java.awt.Color
 
 
-inline fun matrix(func: () -> Unit) {
-    func.invoke()
+inline fun matrix(func: (GlStateManager) -> Unit) {
+    GL11.glPushMatrix()
+    func.invoke(GlStateManager())
+    GL11.glPopMatrix()
 }
 
 /**
